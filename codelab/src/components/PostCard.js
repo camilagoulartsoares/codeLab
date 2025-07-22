@@ -6,14 +6,15 @@ export default function PostCard({ post, isFirst }) {
   const [liked, setLiked] = useState(false);
 
   return (
-    <div className={`post-card ${isFirst ? 'active' : ''}`}>
-      <p className="post-date">{post.date}</p>
-      <h2 className="post-title">{post.title}</h2>
-      <p className="post-description">{post.description}</p>
-      <div className="post-likes" onClick={() => setLiked(!liked)}>
+    <div className={`post-card ${isFirst ? 'active' : ''}`} data-aos="fade-up">
+      <div className="post-like" onClick={() => setLiked(!liked)}>
         {liked ? <AiFillHeart className="icon liked" /> : <AiOutlineHeart className="icon" />}
         <span>{liked ? post.likes + 1 : post.likes}</span>
       </div>
+
+      <p className="post-date">{post.date}</p>
+      <h2 className="post-title">{post.title}</h2>
+      <p className="post-description">{post.description}</p>
     </div>
   );
 }

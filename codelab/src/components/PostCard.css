@@ -1,14 +1,35 @@
 .post-card {
+  position: relative;
   background-color: var(--dark-20);
   border: 1px solid var(--dark-40);
   border-radius: 12px;
   padding: 16px;
   margin-bottom: 16px;
-  position: relative;
 }
 
 .post-card.active {
   border: 1px solid var(--brand-color);
+}
+
+.post-like {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.875rem;
+  color: #ff4d4f;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 1.1rem;
+  color: #ff4d4f;
+}
+
+.icon.liked {
+  color: #ff4d4f;
 }
 
 .post-date {
@@ -27,30 +48,4 @@
 .post-description {
   font-size: 0.875rem;
   color: var(--dark-50);
-}
-
-.post-likes {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 1rem;
-  color: #ff4d4f;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.post-likes:hover {
-  transform: scale(1.05);
-}
-
-.icon {
-  font-size: 1.2rem;
-  color: #ff4d4f;
-}
-
-.liked {
-  color: #ff4d4f;
 }

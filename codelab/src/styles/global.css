@@ -39,3 +39,12 @@ body {
   margin-top: 0.5rem;
   color: var(--brand-color);
 }
+
+input {
+  outline: none;
+  border: 1px solid var(--dark-40);
+}
+
+input:focus {
+  border: 1px solid var(--brand-color);
+}
