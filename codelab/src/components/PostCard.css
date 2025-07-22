@@ -5,7 +5,14 @@
   border-radius: 12px;
   padding: 16px;
   margin-bottom: 16px;
+  transition: border 0.3s ease;
+  cursor: pointer;
 }
+
+.post-card:hover {
+  border: 1px solid var(--brand-color);
+}
+
 
 .post-card.active {
   border: 1px solid var(--brand-color);
